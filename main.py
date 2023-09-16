@@ -97,5 +97,7 @@ def search_bfs(map):
     else:
         print("No path found")
 
-#search_bfs(lava_map1)
-search_bfs(map_data)
+search_bfs(lava_map1)
+#search_bfs(map_data)
+
+
