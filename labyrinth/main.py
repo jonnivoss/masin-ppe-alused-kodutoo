@@ -38,8 +38,6 @@ lava_map2 = [
 start_pos = None
 end_pos = None
 
-a = 0
-
 directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
 def is_valid(x, y, maze):
