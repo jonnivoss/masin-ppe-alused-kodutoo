@@ -35,12 +35,13 @@ lava_map2 = [
     "                s              ",
 ]
 
+start_pos = None
+end_pos = None
+
 directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
 def is_valid(x, y, maze):
     return 0 <= x < len(maze) and 0 <= y < len(maze[x]) and maze[x][y] != '*'
-
-
 
 def find_path_bfs(maze, start, end):
     queue = deque([(start, [])])
@@ -65,13 +66,12 @@ def find_path_bfs(maze, start, end):
     return None
 
 
-
-start_pos = None
-end_pos = None
-
 with open("cave300x300") as f:
-    map_data = [l.strip() for l in f.readlines() if len(l)>1]
-
+    map_data1 = [l.strip() for l in f.readlines() if len(l)>1]
+with open("cave600x600") as f:
+    map_data2 = [l.strip() for l in f.readlines() if len(l)>1]
+with open("cave900x900") as f:
+    map_data3 = [l.strip() for l in f.readlines() if len(l)>1]
 
 
 def search_bfs(map):
@@ -82,7 +82,9 @@ def search_bfs(map):
             elif map[i][j] == 'D':
                 end_pos = (i, j)
     path = find_path_bfs(map, start_pos, end_pos)
+    print_result(path,map)
 
+def print_result (path, map):
     if path is not None:
         for i in range(len(map)):
             row = ""
@@ -97,7 +99,7 @@ def search_bfs(map):
     else:
         print("No path found")
 
-search_bfs(lava_map1)
-#search_bfs(map_data)
+#search_bfs(lava_map1)
+search_bfs(map_data1)
 
 
