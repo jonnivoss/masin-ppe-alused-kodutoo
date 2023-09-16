@@ -69,7 +69,7 @@ def find_path_bfs(maze, start, end):
 start_pos = None
 end_pos = None
 
-with open("cave900x900") as f:
+with open("cave300x300") as f:
     map_data = [l.strip() for l in f.readlines() if len(l)>1]
 
 
