@@ -1,5 +1,4 @@
-from collections import deque
-from queue import Queue
+from queue import Queue, PriorityQueue
 
 lava_map1 = [
     "      **               **      ",
@@ -64,6 +63,29 @@ def find_path_bfs(maze, start, end):
 
     return None
 
+def find_path_gbfs(maze, start, end):
+    queue = PriorityQueue()
+    queue.put((0, start, []))
+    visited = set()
+
+    while not queue.empty():
+        (x, y), path = queue.get()
+
+        if (x, y) == end:
+            return path
+
+        if (x, y) not in visited:
+            visited.add((x, y))
+
+            for dx, dy in directions:
+                new_x, new_y = x + dx, y + dy
+                if (new_x, new_y) not in visited:
+                    if is_valid(new_x, new_y, maze):
+                        new_path = path + [(new_x, new_y)]
+                        queue.put(((new_x, new_y), new_path))
+
+    return None
+
 def find_start_and_end(map):
     for i in range(len(map)):
         for j in range(len(map[i])):
@@ -75,6 +97,11 @@ def find_start_and_end(map):
 def search_bfs(map):
     start_pos ,end_pos = find_start_and_end(map)
     path = find_path_bfs(map, start_pos, end_pos)
+    print_result(path,map)
+
+def search_gbfs(map):
+    start_pos ,end_pos = find_start_and_end(map)
+    path = find_path_gbfs(map, start_pos, end_pos)
     print_result(path,map)
 
 with open("cave300x300") as f:
@@ -99,7 +126,7 @@ def print_result (path, map):
     else:
         print("No path found")
 
-search_bfs(lava_map1)
+search_gbfs(lava_map1)
 #search_bfs(map_data1)
 
 
