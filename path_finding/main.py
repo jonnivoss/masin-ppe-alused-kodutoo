@@ -40,6 +40,15 @@ directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 def is_valid(x, y, maze):
     return 0 <= x < len(maze) and 0 <= y < len(maze[x]) and maze[x][y] != '*'
 
+def find_start_and_end(map):
+    for i in range(len(map)):
+        for j in range(len(map[i])):
+            if map[i][j] == 's':
+                start_pos = (i, j)
+            elif map[i][j] == 'D':
+                end_pos = (i, j)
+    return start_pos, end_pos
+
 def find_path_bfs(maze, start, end):
     queue = Queue()
     queue.put((start, []))
@@ -63,13 +72,15 @@ def find_path_bfs(maze, start, end):
 
     return None
 
+def heuristic(a, b):
+   return abs(a[0] - b[0]) + abs(a[1] - b[1])
 def find_path_gbfs(maze, start, end):
     queue = PriorityQueue()
     queue.put((0, start, []))
     visited = set()
 
     while not queue.empty():
-        (x, y), path = queue.get()
+        no,(x, y), path = queue.get()
 
         if (x, y) == end:
             return path
@@ -81,19 +92,12 @@ def find_path_gbfs(maze, start, end):
                 new_x, new_y = x + dx, y + dy
                 if (new_x, new_y) not in visited:
                     if is_valid(new_x, new_y, maze):
+                        priority = heuristic(end,(new_x, new_y))
                         new_path = path + [(new_x, new_y)]
-                        queue.put(((new_x, new_y), new_path))
+                        queue.put((priority,(new_x, new_y), new_path))
 
     return None
 
-def find_start_and_end(map):
-    for i in range(len(map)):
-        for j in range(len(map[i])):
-            if map[i][j] == 's':
-                start_pos = (i, j)
-            elif map[i][j] == 'D':
-                end_pos = (i, j)
-    return start_pos, end_pos
 def search_bfs(map):
     start_pos ,end_pos = find_start_and_end(map)
     path = find_path_bfs(map, start_pos, end_pos)
@@ -126,7 +130,7 @@ def print_result (path, map):
     else:
         print("No path found")
 
-search_gbfs(lava_map1)
+search_gbfs(map_data1)
 #search_bfs(map_data1)
 
 
