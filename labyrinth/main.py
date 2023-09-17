@@ -1,4 +1,5 @@
 from collections import deque
+from queue import Queue
 
 lava_map1 = [
     "      **               **      ",
@@ -41,11 +42,12 @@ def is_valid(x, y, maze):
     return 0 <= x < len(maze) and 0 <= y < len(maze[x]) and maze[x][y] != '*'
 
 def find_path_bfs(maze, start, end):
-    queue = deque([(start, [])])
+    queue = Queue()
+    queue.put((start, []))
     visited = set()
 
-    while queue:
-        (x, y), path = queue.popleft()
+    while not queue.empty():
+        (x, y), path = queue.get()
 
         if (x, y) == end:
             return path
@@ -55,10 +57,10 @@ def find_path_bfs(maze, start, end):
 
             for dx, dy in directions:
                 new_x, new_y = x + dx, y + dy
-                if (new_x,new_y) not in visited:
+                if (new_x, new_y) not in visited:
                     if is_valid(new_x, new_y, maze):
                         new_path = path + [(new_x, new_y)]
-                        queue.append(((new_x, new_y), new_path))
+                        queue.put(((new_x, new_y), new_path))
 
     return None
 
