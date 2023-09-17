@@ -65,6 +65,17 @@ def find_path_bfs(maze, start, end):
 
     return None
 
+def find_start_and_end():
+    for i in range(len(map)):
+        for j in range(len(map[i])):
+            if map[i][j] == 's':
+                start_pos = (i, j)
+            elif map[i][j] == 'D':
+                end_pos = (i, j)
+def search_bfs(map):
+    find_start_and_end()
+    path = find_path_bfs(map, start_pos, end_pos)
+    print_result(path,map)
 
 with open("cave300x300") as f:
     map_data1 = [l.strip() for l in f.readlines() if len(l)>1]
@@ -72,17 +83,6 @@ with open("cave600x600") as f:
     map_data2 = [l.strip() for l in f.readlines() if len(l)>1]
 with open("cave900x900") as f:
     map_data3 = [l.strip() for l in f.readlines() if len(l)>1]
-
-
-def search_bfs(map):
-    for i in range(len(map)):
-        for j in range(len(map[i])):
-            if map[i][j] == 's':
-                start_pos = (i, j)
-            elif map[i][j] == 'D':
-                end_pos = (i, j)
-    path = find_path_bfs(map, start_pos, end_pos)
-    print_result(path,map)
 
 def print_result (path, map):
     if path is not None:
