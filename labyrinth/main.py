@@ -35,9 +35,6 @@ lava_map2 = [
     "                s              ",
 ]
 
-start_pos = None
-end_pos = None
-
 directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
 def is_valid(x, y, maze):
@@ -65,15 +62,16 @@ def find_path_bfs(maze, start, end):
 
     return None
 
-def find_start_and_end():
+def find_start_and_end(map):
     for i in range(len(map)):
         for j in range(len(map[i])):
             if map[i][j] == 's':
                 start_pos = (i, j)
             elif map[i][j] == 'D':
                 end_pos = (i, j)
+    return start_pos, end_pos
 def search_bfs(map):
-    find_start_and_end()
+    start_pos ,end_pos = find_start_and_end(map)
     path = find_path_bfs(map, start_pos, end_pos)
     print_result(path,map)
 
@@ -99,7 +97,7 @@ def print_result (path, map):
     else:
         print("No path found")
 
-#search_bfs(lava_map1)
-search_bfs(map_data1)
+search_bfs(lava_map1)
+#search_bfs(map_data1)
 
 
