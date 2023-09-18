@@ -1,4 +1,4 @@
-#Projecti lühi kirjeldus
+# Projecti lühi kirjeldus
 
 - otsib labürindist teekonna algusest lõpuni
 - on BFS, Greedy ja A* algoritmid

@@ -42,6 +42,7 @@ def is_valid(x, y, maze):
     return 0 <= x < len(maze) and 0 <= y < len(maze[x]) and maze[x][y] != '*'
 def heuristic(a, b):
    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
 def find_start_and_end(map):
     for i in range(len(map)):
         for j in range(len(map[i])):
@@ -180,5 +181,6 @@ def print_result (path, map, iteratsioone, time_elapsed):
 search_bfs(map_data1)
 search_gbfs(map_data1)
 search_a_star(map_data1)
+
 
 
