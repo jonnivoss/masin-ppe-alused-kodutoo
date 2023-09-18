@@ -178,9 +178,9 @@ def print_result (path, map, iteratsioone, time_elapsed):
 
     print("võttis aega", time_elapsed, "iteratsioone oli ", iteratsioone)
 
-search_bfs(map_data1)
-search_gbfs(map_data1)
-search_a_star(map_data1)
+search_bfs(map_data3)
+search_gbfs(map_data3)
+search_a_star(map_data3)
 
 
 
