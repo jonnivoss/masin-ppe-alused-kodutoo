@@ -1,10 +1,10 @@
-## Projecti lühi kirjeldus
+# Projecti lühi kirjeldus
 
 - otsib labürindist teekonna algusest lõpuni
 - on BFS, Greedy ja A* algoritmid
 - mõõdab mitu iteratsiooni tehti ja kaua aega selleks kulus
 
-# 900x900 tulemused
+## 900x900 tulemused
 
 - BFS võttis aega 4.750097274780273, iteratsioone oli  799242
 - Greedy võttis aega 0.6841540336608887, iteratsioone oli  50126
