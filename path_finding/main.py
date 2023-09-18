@@ -1,4 +1,5 @@
 from queue import Queue, PriorityQueue
+import time
 
 lava_map1 = [
     "      **               **      ",
@@ -73,10 +74,8 @@ def find_path_bfs(maze, start, end):
                         queue.put(((new_x, new_y), new_path))
 
     return None
-def search_bfs(map):
-    start_pos ,end_pos = find_start_and_end(map)
-    path, i = find_path_bfs(map, start_pos, end_pos)
-    print_result(path,map,i)
+
+
 
 #greedy algoritm
 def find_path_gbfs(maze, start, end):
@@ -102,10 +101,8 @@ def find_path_gbfs(maze, start, end):
                         queue.put((priority,(new_x, new_y), new_path))
 
     return None
-def search_gbfs(map):
-    start_pos ,end_pos = find_start_and_end(map)
-    path, i = find_path_gbfs(map, start_pos, end_pos)
-    print_result(path,map,i)
+
+
 
 #a täht algoritm
 def find_path_a_star(maze, start, end):
@@ -135,10 +132,26 @@ def find_path_a_star(maze, start, end):
                         queue.put((priority,(new_x, new_y), new_path))
 
     return None
+
+
+def search_bfs(map):
+    start_pos ,end_pos = find_start_and_end(map)
+    start_time = time.time()
+    path, i = find_path_bfs(map, start_pos, end_pos)
+    end_time = time.time()
+    print_result(path,map, i, end_time - start_time)
+def search_gbfs(map):
+    start_pos ,end_pos = find_start_and_end(map)
+    start_time = time.time()
+    path, i = find_path_gbfs(map, start_pos, end_pos)
+    end_time = time.time()
+    print_result(path,map, i, end_time - start_time)
 def search_a_star(map):
     start_pos, end_pos = find_start_and_end(map)
+    start_time = time.time()
     path, i = find_path_a_star(map, start_pos, end_pos)
-    print_result(path,map, i)
+    end_time = time.time()
+    print_result(path,map, i, end_time - start_time)
 
 with open("cave300x300") as f:
     map_data1 = [l.strip() for l in f.readlines() if len(l)>1]
@@ -147,8 +160,8 @@ with open("cave600x600") as f:
 with open("cave900x900") as f:
     map_data3 = [l.strip() for l in f.readlines() if len(l)>1]
 
-def print_result (path, map, iteratsioone):
-    """if path is not None:
+def print_result (path, map, iteratsioone, time_elapsed):
+    if path is not None:
         for i in range(len(map)):
             row = ""
             for j in range(len(map[i])):
@@ -160,9 +173,9 @@ def print_result (path, map, iteratsioone):
                     row += map[i][j]
             print(row)
     else:
-        print("No path found")"""
+        print("No path found")
 
-    print("võttis aega", "iteratsioone oli ", iteratsioone)
+    print("võttis aega", time_elapsed, "iteratsioone oli ", iteratsioone)
 
 search_bfs(map_data1)
 search_gbfs(map_data1)
