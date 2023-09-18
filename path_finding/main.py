@@ -103,8 +103,6 @@ def find_path_gbfs(maze, start, end):
 
     return None
 
-
-
 #a täht algoritm
 def find_path_a_star(maze, start, end):
     queue = PriorityQueue()
@@ -133,7 +131,6 @@ def find_path_a_star(maze, start, end):
                         queue.put((priority,(new_x, new_y), new_path))
 
     return None
-
 
 def search_bfs(map):
     start_pos ,end_pos = find_start_and_end(map)
