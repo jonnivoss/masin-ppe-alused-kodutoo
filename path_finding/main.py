@@ -55,12 +55,12 @@ def find_path_bfs(maze, start, end):
     queue = Queue()
     queue.put((start, []))
     visited = set()
-
+    i = 0
     while not queue.empty():
         (x, y), path = queue.get()
-
+        i += 1
         if (x, y) == end:
-            return path
+            return path, i
 
         if (x, y) not in visited:
             visited.add((x, y))
@@ -75,20 +75,20 @@ def find_path_bfs(maze, start, end):
     return None
 def search_bfs(map):
     start_pos ,end_pos = find_start_and_end(map)
-    path = find_path_bfs(map, start_pos, end_pos)
-    print_result(path,map)
+    path, i = find_path_bfs(map, start_pos, end_pos)
+    print_result(path,map,i)
 
 #greedy algoritm
 def find_path_gbfs(maze, start, end):
     queue = PriorityQueue()
     queue.put((0, start, []))
     visited = set()
-
+    i = 0
     while not queue.empty():
         no,(x, y), path = queue.get()
-
+        i += 1
         if (x, y) == end:
-            return path
+            return path, i
 
         if (x, y) not in visited:
             visited.add((x, y))
@@ -104,8 +104,8 @@ def find_path_gbfs(maze, start, end):
     return None
 def search_gbfs(map):
     start_pos ,end_pos = find_start_and_end(map)
-    path = find_path_gbfs(map, start_pos, end_pos)
-    print_result(path,map)
+    path, i = find_path_gbfs(map, start_pos, end_pos)
+    print_result(path,map,i)
 
 #a täht algoritm
 def find_path_a_star(maze, start, end):
@@ -114,12 +114,12 @@ def find_path_a_star(maze, start, end):
     visited = set()
     cost_so_far = {}
     cost_so_far[start] = 0
-
+    i = 0
     while not queue.empty():
         cost, (x, y), path = queue.get()
-
+        i += 1
         if (x, y) == end:
-            return path
+            return path, i
 
         if (x, y) not in visited:
             visited.add((x, y))
@@ -137,8 +137,8 @@ def find_path_a_star(maze, start, end):
     return None
 def search_a_star(map):
     start_pos, end_pos = find_start_and_end(map)
-    path = find_path_a_star(map, start_pos, end_pos)
-    print_result(path,map)
+    path, i = find_path_a_star(map, start_pos, end_pos)
+    print_result(path,map, i)
 
 with open("cave300x300") as f:
     map_data1 = [l.strip() for l in f.readlines() if len(l)>1]
@@ -147,8 +147,8 @@ with open("cave600x600") as f:
 with open("cave900x900") as f:
     map_data3 = [l.strip() for l in f.readlines() if len(l)>1]
 
-def print_result (path, map):
-    if path is not None:
+def print_result (path, map, iteratsioone):
+    """if path is not None:
         for i in range(len(map)):
             row = ""
             for j in range(len(map[i])):
@@ -160,9 +160,12 @@ def print_result (path, map):
                     row += map[i][j]
             print(row)
     else:
-        print("No path found")
+        print("No path found")"""
 
+    print("võttis aega", "iteratsioone oli ", iteratsioone)
+
+search_bfs(map_data1)
+search_gbfs(map_data1)
 search_a_star(map_data1)
-#search_bfs(map_data1)
 
 
