@@ -32,4 +32,4 @@ def print_result (path, map, iteratsioone, time_elapsed):
     else:
         print("No path found")
 
-    print("võttis aega", time_elapsed, "iteratsioone oli ", iteratsioone)
+    print("clock time", time_elapsed, "number of iterations", iteratsioone, "lenght of path",len(path))

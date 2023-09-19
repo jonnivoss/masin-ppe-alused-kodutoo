@@ -6,12 +6,12 @@ def find_path(maze, start, end):
     queue = Queue()
     queue.put((start, []))
     visited = set()
-    i = 0
+    iterations = 0
     while not queue.empty():
         (x, y), path = queue.get()
 
         if (x, y) == end:
-            return path, i
+            return path, iterations
 
         if (x, y) not in visited:
             visited.add((x, y))
@@ -20,7 +20,7 @@ def find_path(maze, start, end):
                 new_x, new_y = x + dx, y + dy
                 if (new_x, new_y) not in visited:
                     if pl.is_valid(new_x, new_y, maze):
-                        i += 1
+                        iterations += 1
                         new_path = path + [(new_x, new_y)]
                         queue.put(((new_x, new_y), new_path))
 

@@ -8,12 +8,12 @@ def find_path(maze, start, end):
     visited = set()
     cost_so_far = {}
     cost_so_far[start] = 0
-    i = 0
+    iterations = 0
     while not queue.empty():
         cost, (x, y), path = queue.get()
 
         if (x, y) == end:
-            return path, i
+            return path, iterations
 
         if (x, y) not in visited:
             visited.add((x, y))
@@ -23,7 +23,7 @@ def find_path(maze, start, end):
                 new_cost = cost_so_far[(x, y)] + 1
                 if (new_x, new_y) not in visited:
                     if pl.is_valid(new_x, new_y, maze):
-                        i += 1
+                        iterations += 1
                         cost_so_far[(new_x, new_y)] = new_cost
                         priority = new_cost + pl.heuristic(end,(new_x, new_y))
                         new_path = path + [(new_x, new_y)]

@@ -1,14 +1,60 @@
-# Projecti lühi kirjeldus
+# Project report
 
-- otsib labürindist teekonna algusest lõpuni
-- on BFS, Greedy ja A* algoritmid
-- mõõdab mitu iteratsiooni tehti ja kaua aega selleks kulus
+This project is here to find a path on a 2D ASCII map. This project compares 3 different algorithms: BFS, Greedy and A*.
 
-## 900x900 tulemused
+## 300x300 results
 
-- BFS võttis aega 4.750097274780273, iteratsioone oli  799242
-- Greedy võttis aega 0.6841540336608887, iteratsioone oli  50126
-- A * võttis aega 1.2062709331512451, iteratsioone oli  166311
+### BFS
+- clock time is 0.2650609016418457
+- number of iterations is 83728
+- lenght of path is 554
 
-A* leidis samasuguse teekonna nagu BFS, aga võttis ~4 korda vähem aega.
-Greedy leidis teekonna kõige kiiremini, aga see teekond oli pikem kui teistel
+### Greedy
+- clock time 0.031006574630737305
+- number of iterations 6435
+- lenght of path 1004
+
+### A*
+- clock time 0.06401419639587402
+- number of iterations 15160
+- lenght of path 554
+
+## 600x600 results
+
+### BFS
+
+- clock time 1.5788195133209229
+- number of iterations 350478
+- lenght of path 1247
+
+### Greedy
+
+- clock time 0.08101820945739746
+- number of iterations 11937
+- lenght of path 2037
+
+### A*
+
+- clock time 0.6231403350830078
+- number of iterations 108180
+- lenght of path 1247
+
+## 900x900 results
+
+### BFS
+
+- clock time 4.900860071182251
+- number of iterations 799393
+- lenght of path 1843
+
+### Greedy
+
+- clock time 0.7041587829589844
+- number of iterations 53778
+- lenght of path 4243
+
+### A*
+
+- clock time 1.1832666397094727
+- number of iterations 169536
+- lenght of path 1843
