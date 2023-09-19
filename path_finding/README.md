@@ -1,6 +1,7 @@
 # Project report
 
 This project is here to find a path on a 2D ASCII map. This project compares 3 different algorithms: BFS, Greedy and A*.
+As we can see with the results down here, A* algorithm is the best solution for a relatively fast clock time while finding the shortest route. Greedy search finds a path the fastest that , while BFS finds the fastest route quite alot slower than the other two.
 
 ## 300x300 results
 
