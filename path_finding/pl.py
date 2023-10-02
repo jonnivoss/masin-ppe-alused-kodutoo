@@ -18,7 +18,7 @@ def find_start_and_end(map):
 
 
 def print_result (path, map, iteratsioone, time_elapsed):
-    if path is not None:
+    """if path is not None:
         for i in range(len(map)):
             row = ""
             for j in range(len(map[i])):
@@ -30,6 +30,6 @@ def print_result (path, map, iteratsioone, time_elapsed):
                     row += map[i][j]
             print(row)
     else:
-        print("No path found")
+        print("No path found")"""
 
     print("clock time", time_elapsed, "number of iterations", iteratsioone, "lenght of path",len(path))
