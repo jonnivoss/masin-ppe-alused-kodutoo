@@ -2,16 +2,14 @@
 
 from random import randint
 
-
-
 def is_safe(board,queens):
     for q in queens:
-        # Check if no queens can capture the current position
+
         piece = q
         letter = piece[2]
         row = piece[0]
         col = piece[1]
-        # Check the current column
+
         for i in range(N):
             if board[i][col] != 'q':
                 board[i][col] = letter
@@ -38,7 +36,7 @@ def place_queens(N):
         while True:
             a = randint(0, N - 1)
             b = randint(0, N - 1)
-            # Check if the randomly chosen position is safe
+
             if board[a][b] != 'q':
                 queens.append((a, b, str(i)))
                 board[a][b] = 'q'

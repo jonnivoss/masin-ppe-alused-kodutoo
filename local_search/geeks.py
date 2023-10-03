@@ -5,7 +5,6 @@ from random import randint
 N = 8
 
 def configureRandomly(board, state):
-
     for i in range(N):
 
         state[i] = randint(0, 100000) % N;
