@@ -173,8 +173,8 @@ board = [[0 for _ in range(N)] for _ in range(N)]
 
 
 configureRandomly(board, state);
-
-
+printBoard(board)
+print()
 hillClimbing(board, state);
 
 
