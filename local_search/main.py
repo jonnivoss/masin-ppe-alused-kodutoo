@@ -28,7 +28,6 @@ def is_safe(board,queens):
 
     return board
 
-
 def place_queens(N):
     board = [['.' for _ in range(N)] for _ in range(N)]
     queens = []
@@ -44,15 +43,13 @@ def place_queens(N):
 
     return board, queens
 
-
 def print_board(board):
     for row in board:
         print(' '.join(row))
 
-
 N = 5
 board,queens = place_queens(N)
-board = is_safe(board, queens)
+#board = is_safe(board, queens)
 print("Initial Random Placement:")
 
 print_board(board)
