@@ -49,7 +49,9 @@ def print_board(board):
 
 N = 5
 board,queens = place_queens(N)
-#board = is_safe(board, queens)
+print_board(board)
+
+board = is_safe(board, queens)
 print("Initial Random Placement:")
 
 print_board(board)
