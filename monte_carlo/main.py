@@ -121,7 +121,7 @@ def player_move(columns):
 
 def add_piece(board, columns, selected, player):
     board[board_Y - columns[selected] - 1][selected] = player
-    columns[selected] = columns[selected] + 1
+    columns[selected] += 1
     return board, columns
 
 def copy_matrix(matrix):
@@ -141,15 +141,28 @@ def copy_matrix(matrix):
 
 def monte_carlo(board, columns):
     selected = [0 for _ in range(board_X)]
+    num_moves = [0 for _ in range(board_X)]
+    win_percent = ["0.0" for _ in range(board_X)]
 
-    for i in range(100):
+    for i in range(1000):
         start,winner = ai_move(board, columns)
+        num_moves[start] += 1
         if winner == 2:
             selected[start] += 1
-        elif winner == 1:
-            selected[start] -= 1
-    m = max(selected)
-    return selected.index(m)
+        elif winner == -1:
+            selected[start] += 0.5
+    for i in range(board_X):
+        if num_moves[i] != 0:
+            win_percent[i] = round(selected[i]/num_moves[i] * 100,3)
+    print("win precent",*win_percent)
+    best = win_percent[0]
+    best_index = 0
+    for i in range(board_X):
+        if win_percent[i] > best:
+            best = win_percent[i]
+            best_index = i
+
+    return best_index
 
 def ai_move(board, columns):
     turn = 1
@@ -194,9 +207,10 @@ def play_game():
         if turn == 0:
             # Select column to put a piece in
             selected = player_move(columns)
+            print("\n", selected + 1, "see on mangja ome \n")
         else:
             selected = monte_carlo(board, columns)
-            print("\n\n\n", selected+1, "see on ai ome \n\n")
+            print("\n", selected+1, "see on ai ome \n")
 
         # Add a piece to the board
         board,columns = add_piece(board, columns, selected, players[turn])
