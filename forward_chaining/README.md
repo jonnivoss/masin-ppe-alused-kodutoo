@@ -1,21 +1,18 @@
-# Table
+Fragile &nbsp;: &nbsp;Fall &nbsp; &nbsp;: &nbsp;Liquid &nbsp;: &nbsp;Spoiled &nbsp;: &nbsp; &nbsp;: &nbsp;Breaks &nbsp;: &nbsp;Mess &nbsp; &nbsp;: &nbsp;Smell
 
-Fragile : Fall  : Liquid : Spoiled :  :  Breaks  : Mess    : Smell
-
- 0      |  0    |   0    |  0      |  |    0     |   0     |   0 \
- 0      |  0    |   0    |  1      |  |    0     |   0     |   0 \
- 0      |  0    |   1    |  0      |  |    0     |   0     |   0 \
- 0      |  0    |   1    |  1      |  |    0     |   0     |   0 \
- 0      |  1    |   0    |  0      |  |    0     |   0     |   0 \
- 0      |  1    |   0    |  1      |  |    0     |   0     |   0 \
- 0      |  1    |   1    |  0      |  |    0     |   0     |   0 \
- 0      |  1    |   1    |  1      |  |    0     |   0     |   0 \
- 1      |  0    |   0    |  0      |  |    0     |   0     |   0 \
- 1      |  0    |   0    |  1      |  |    0     |   0     |   0 \
- 1      |  0    |   1    |  0      |  |    0     |   0     |   0 \
- 1      |  0    |   1    |  1      |  |    0     |   0     |   0 \
- 1      |  1    |   0    |  0      |  |    1     |   0     |   0 \
- 1      |  1    |   0    |  1      |  |    1     |   0     |   1 \
- 1      |  1    |   1    |  0      |  |    1     |   1     |   0 \
- 1      |  1    |   1    |  1      |  |    1     |   1     |   1 \
- 
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;0 &nbsp;\
+ &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp; &nbsp;&nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp;&nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp;1 &nbsp;
