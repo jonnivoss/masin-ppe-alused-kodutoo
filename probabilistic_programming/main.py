@@ -20,7 +20,7 @@ def battery_model():
 
 
 # Perform simulation for question (a)
-num_simulations = 10
+num_simulations = 100000
 full_batteries_count_a = 0
 
 for _ in range(num_simulations):
@@ -32,7 +32,7 @@ probability_three_full_a = full_batteries_count_a / num_simulations
 print(f"Probability of having three full batteries given at least one is empty: {probability_three_full_a:.4f}")
 
 # Perform simulation for question (b)
-num_simulations = 10000
+num_simulations = 100000
 full_batteries_count_b = 0
 
 for _ in range(num_simulations):
