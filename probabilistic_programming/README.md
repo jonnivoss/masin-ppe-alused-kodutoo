@@ -1,13 +1,16 @@
 # Probabalistic programming
 
 1. 10 simulations
-   1. 0.9000
-   2. 0.0000
+   1. 0.7000
+   2. 0.3000
 
-2. 1000
-    1. 0.9260
-    2. 0.0090
+2. 1000 simulations
+    1. 0.7170
+    2. 0.2880
 
-3. 100000
-   1. 0.9129
-   2. 0.0126
+3. 100000 simulations
+   1. 0.7316
+   2. 0.2911
+
+(it looks good, because I used calculator)
+(it looks good, because I used calculator)
